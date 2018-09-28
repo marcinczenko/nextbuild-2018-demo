@@ -3,8 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-frontend-developer/css-grid-helper": "^1.0.6",
+    "emotion": "^9.2.10",
+    "eslint": "5.6.0",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-emotion": "^9.2.10",
+    "react-media": "^1.8.0",
     "react-scripts": "^2.0.0"
   },
   "scripts": {
@@ -21,5 +27,24 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/node_modules/**",
+      "**/umd/**",
+      "**/es/**",
+      "**/lib/**",
+      "**/build/**"
+    ],
+    "envs": [
+      "es6",
+      "browser",
+      "jest"
+    ]
+  }
 }
