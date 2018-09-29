@@ -29,8 +29,8 @@ class NextBuild extends React.Component {
   }
 
   updateRooms = () => {
-    // const now = Math.round(Date.now() / 1000)
-    const now = 1538209800
+    const now = Math.round(Date.now() / 1000)
+    // const now = 1538219700 - 1
     const active = this.timestamps.filter(t => t > now)
     if (active.length === 0) {
       this.setState({
@@ -71,19 +71,19 @@ class NextBuild extends React.Component {
           matches ? (
             <NextBuildGridM>
               <HeaderGridItemM><Header /></HeaderGridItemM>
-              <Room1GridItemM><Room color='#4C9BC6' alignItems='center' {...this.state.room1} /></Room1GridItemM>
-              <Room2GridItemM><Room color='#4CAF50' alignItems='center' {...this.state.room2} /></Room2GridItemM>
-              <Room3GridItemM><Room color='#C6B14C' alignItems='center'{...this.state.room3} /></Room3GridItemM>
-              <Room4GridItemM><Room color='#BC6448' alignItems='center' {...this.state.room4} /></Room4GridItemM>
+              <Room1GridItemM><Room roomNumber='1' color='#4C9BC6' alignItems='center' {...this.state.room1} /></Room1GridItemM>
+              <Room2GridItemM><Room roomNumber='2' color='#4CAF50' alignItems='center' {...this.state.room2} /></Room2GridItemM>
+              <Room3GridItemM><Room roomNumber='3' color='#C6B14C' alignItems='center'{...this.state.room3} /></Room3GridItemM>
+              <Room4GridItemM><Room roomNumber='4' color='#BC6448' alignItems='center' {...this.state.room4} /></Room4GridItemM>
               <FooterGridItemM><Footer /></FooterGridItemM>
             </NextBuildGridM>
           ) : (
             <NextBuildGrid>
               <HeaderGridItem><Header /></HeaderGridItem>
-              <Room1GridItem><Room color='#4C9BC6' alignItems='flex-end'{...this.state.room1} /></Room1GridItem>
-              <Room2GridItem><Room color='#4CAF50' alignItems='flex-start' {...this.state.room2} /></Room2GridItem>
-              <Room3GridItem><Room color='#C6B14C' alignItems='flex-end' {...this.state.room3} /></Room3GridItem>
-              <Room4GridItem><Room color='#BC6448' alignItems='flex-start' {...this.state.room4} /></Room4GridItem>
+              <Room1GridItem><Room roomNumber='1' color='#4C9BC6' alignItems='flex-end'{...this.state.room1} /></Room1GridItem>
+              <Room2GridItem><Room roomNumber='2' color='#4CAF50' alignItems='flex-start' {...this.state.room2} /></Room2GridItem>
+              <Room3GridItem><Room roomNumber='3' color='#C6B14C' alignItems='flex-end' {...this.state.room3} /></Room3GridItem>
+              <Room4GridItem><Room roomNumber='4' color='#BC6448' alignItems='flex-start' {...this.state.room4} /></Room4GridItem>
               <FooterGridItem><Footer /></FooterGridItem>
             </NextBuildGrid>
           )

@@ -1,7 +1,7 @@
 export default {
   0: {
     type: 'break',
-    description: 'waiting for Next Build 2018'
+    description: 'Waiting for Next Build 2018'
   },
   1: {
     type: 'break',

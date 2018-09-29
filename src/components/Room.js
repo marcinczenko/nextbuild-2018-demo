@@ -17,41 +17,64 @@ const RoomWrapper = styled('div')({
   height: '100%',
   width: '100%'
 }, ({ alignItems }) => ({
-  alignItems: `${alignItems}`
+  alignItems: `${alignItems}`,
+  textAlign: `${alignItems === 'center' ? 'center' : (alignItems === 'flex-end' ? 'right' : 'left')}`
 }))
+
+const Div = styled('div')({
+  display: 'flex',
+  flexFlow: 'column nowrap',
+  justifyContent: 'space-between'
+})
 
 const A = styled('a')({
   textDecoration: 'none',
   color: 'black'
 })
 
+const H1 = styled('h1')(({ alignItems }) => ({
+  margin: 0,
+  alignSelf: `${alignItems}`,
+  textAlign: 'center',
+  color: 'white',
+  border: '1px solid white',
+  width: '40px'
+}))
+
 class Room extends Component {
   renderTalk = () => {
-    const { speaker, title, link, alignItems } = this.props
+    const { speaker, title, link, alignItems, roomNumber } = this.props
     return (
       <RoomWrapper alignItems={alignItems}>
-        <h2><A href={link} target='_blank' rel='noopener noreferrer'>{title}</A></h2>
+        <Div>
+          <H1 alignItems={alignItems}>{roomNumber}</H1>
+          <h2><A href={link} target='_blank' rel='noopener noreferrer'>{title}</A></h2>
+        </Div>
         <h4>{speaker}</h4>
       </RoomWrapper>
     )
   }
 
   renderBreak = () => {
-    const { description } = this.props
+    const { description, alignItems, roomNumber } = this.props
 
     return (
-      <div>
+      <RoomWrapper alignItems={alignItems}>
+        <H1 alignItems={alignItems}>{roomNumber}</H1>
         <h2>{description}</h2>
-      </div>
+      </RoomWrapper>
     )
   }
 
   renderKeynote = () => {
-    const { speaker, title, link, alignItems } = this.props
+    const { speaker, title, link, alignItems, roomNumber } = this.props
 
     return (
       <RoomWrapper alignItems={alignItems}>
-        <h2><A href={link} target='_blank' rel='noopener noreferrer'>{title}</A></h2>
+        <Div>
+          <H1 alignItems={alignItems}>{roomNumber}</H1>
+          <h2><A href={link} target='_blank' rel='noopener noreferrer'>{title}</A></h2>
+        </Div>
         <h4>{speaker}</h4>
       </RoomWrapper>
     )
