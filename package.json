@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-frontend-developer/css-grid-helper": "^1.0.6",
     "emotion": "^9.2.10",
     "eslint": "5.6.0",
     "prop-types": "^15.6.2",

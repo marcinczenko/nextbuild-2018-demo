@@ -1,6 +1,6 @@
 import styled from 'react-emotion'
 
-import { Grid } from '@react-frontend-developer/css-grid-helper'
+import { Grid } from 'helpers'
 
 let grid = new Grid([
   'header',
